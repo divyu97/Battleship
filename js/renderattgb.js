@@ -182,6 +182,7 @@ export function renderAttackGB(attacker, receiver) {
                     if (rec.gameBoard.allSunk()) {
                         alert(`${att.getName()} WON!!!`);
                         showMenu();
+                        return;
                     }
                 } else {
                     document.querySelector(`#${id}`).style.backgroundColor = "white";
@@ -192,4 +193,5 @@ export function renderAttackGB(attacker, receiver) {
                 document.querySelector("body").innerHTML += `<button id="attack">ATTACK ${att.getName()}</button>`;
             });
         }
+
 }
