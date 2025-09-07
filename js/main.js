@@ -8,20 +8,22 @@ let player1, player2, curr, i = 0, names;
 
 showMenu();
 
-document.querySelector("#start-game").addEventListener("click", () => {
-    let user1 = document.querySelector("#player-1").value;
-    let user2 = document.querySelector("#player-2").value;
-    if (user1 === "" || user2 === "")
-        alert("Username field can't be empty");
-    else if (user1 === user2)
-        alert("Both users can't have the same username");
-    else {
-        player1 = new Player(user1);
-        player2 = new Player(user2);
-        curr = player1;
-        renderGameBoard(curr);
-        document.querySelector("body").innerHTML += `<button id="place-ships">PLACE SHIPS</button>`;
-        names = Object.keys(curr.gameBoard.getShips());
+document.addEventListener("click", (event) => {
+    if (event.target.id === "start-game") {
+        let user1 = document.querySelector("#player-1").value;
+        let user2 = document.querySelector("#player-2").value;
+        if (user1 === "" || user2 === "")
+            alert("Username field can't be empty");
+        else if (user1 === user2)
+            alert("Both users can't have the same username");
+        else {
+            player1 = new Player(user1);
+            player2 = new Player(user2);
+            curr = player1;
+            renderGameBoard(curr);
+            document.querySelector("body").innerHTML += `<button id="place-ships">PLACE SHIPS</button>`;
+            names = Object.keys(curr.gameBoard.getShips());
+        }
     }
 });
 
@@ -74,4 +76,5 @@ document.addEventListener("click", (event) => {
             curr = player1;
         }
     }
+
 });
