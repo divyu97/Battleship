@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    font-family: "Pixelify Sans", Arial;
+}
+
+#game-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+#player-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#gameboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#gameboard-container {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    border: solid black;
+    border-width: 0.15rem 0 0 0.15rem;
+}
+
+#col-index {
+    display: flex;
+    align-self: flex-end;
+}
+
+#row-10 {
+    border-bottom: 0.15rem solid black;
+}
+
+.cell {
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: rgb(51, 186, 240);
+    border-right: 0.15rem solid black;
+}
+
+.index {
+    width: 1.9rem;
+    border-right: 0.15rem solid transparent;
+    height: 2.05rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input, button, label {
+    font-size: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input, select {
+    border: 0.15rem solid black;
+    border-radius: 0.4rem;
+    padding-left: 0.3rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(7, 19, 190);
+}
+
+button {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.4rem;
+}
+
+#start-game {
+    background-color: green;
+    color: white;
+}
+
+#start-game:hover {
+    background-color: rgb(3, 73, 3);
+}
+
+#place-ships {
+    background-color: blue;
+    color: white;
+}
+
+#place-ships:hover {
+    background-color: rgb(6, 6, 109);
+}
+
+#place-ship-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#pos-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#orientation {
+    font-size: 1.5rem;
+    padding-left: 0.1rem;
+}
+
+#place-ship, #attack {
+    background-color: red;
+    color: white;
+    width: fit-content;
+    align-self: center;
+}
+
+#pos-row, #pos-col {
+    width: 6rem;
+}
+
+#place-ship:hover, #attack:hover {
+    background-color: rgb(102, 6, 6);
+}
+
+#attack-instruction {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
